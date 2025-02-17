@@ -4,3 +4,21 @@ spring:
 
 server:
   port: 8999
+
+camunda:
+  client:
+    mode: self-managed
+    zeebe:
+      enabled: true
+      grpc-address: http://127.0.0.1:26500
+      rest-address: http://127.0.0.1:8080
+
+logging:
+  level:
+    root: INFO
+    org.camunda: DEBUG
+  file:
+    name: logs/app.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"

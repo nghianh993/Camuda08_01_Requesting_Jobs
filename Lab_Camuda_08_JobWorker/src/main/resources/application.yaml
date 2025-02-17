@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Lab_Camuda_08_JobWorker
+
+server:
+  port: 8999

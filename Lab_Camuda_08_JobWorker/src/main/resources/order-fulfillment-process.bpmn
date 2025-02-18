@@ -194,7 +194,7 @@
           <zeebe:input source="=customerInfo" target="customerInfo" />
           <zeebe:input source="=orderDetails" target="orderDetails" />
           <zeebe:output source="=if orderApproved = null then true else approvalNotes" target="orderApproved" />
-          <zeebe:output source="=if approvalNotes = null then &#34;Không có ghi chú&#34; else approvalNotes" target="approvalNotes" />
+          <zeebe:output source="=if approvalNotes = null then &#34;Hàng sẵn có nhưng phải đợi máy check đã :D&#34; else approvalNotes" target="approvalNotes" />
         </zeebe:ioMapping>
         <zeebe:properties>
           <zeebe:property name="camundaModeler:exampleOutputJson" value="{&#34;approvalNotes&#34;: &#34;Hàng sẵn có nhưng phải đợi máy check đã :D&#34;,&#34;orderApproved&#34;:true}" />

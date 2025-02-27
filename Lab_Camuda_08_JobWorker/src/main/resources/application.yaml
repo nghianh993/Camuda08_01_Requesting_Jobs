@@ -20,27 +20,21 @@ camunda:
       defaults:
         poll-interval: PT10S #Cau hinh 10s gui 1 lan cho toi khi het timeout se gui tiep. Request tiep theo dua vao timeout :
         stream-enabled: false
-        request-timeout: 10S # Cau hinh request timeout (thoi gian xu ly co the bi anh huong boi toc do xu ly va do tre cua mang)P
+        request-timeout: 10S # Cau hinh request timeout (thoi gian xu ly co the bi anh huong boi toc do xu ly va do tre cua mang)
         max-jobs-active: 5
         timeout: 1s # Thoi gian toi da ma job worker hoan thanh cong viec va phan hoi lai cho zeebe broker
-#      base-url: ''
-#      ca-certificate-path: ''
-#      defaults:
 #        auto-complete: false
 #        enabled: false
 #        fetch-variables: ''
 #        force-fetch-all-variables: false
-#        max-jobs-active: 3
 #        max-retries: 3
 #        method-info: 4
 #        name: ''
-#        poll-interval: 1
-#        request-timeout: 1000
-#        stream-enabled: false
 #        stream-timeout: 3
 #        tenant-ids: ''
-#        timeout: 1000
 #        type: ''
+#      base-url: ''
+#      ca-certificate-path: ''
 #      execution-threads: 1
 #      keep-alive: 1
 #      max-message-size: 1

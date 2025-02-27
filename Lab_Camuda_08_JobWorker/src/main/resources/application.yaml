@@ -17,6 +17,12 @@ camunda:
       grpc-address: http://127.0.0.1:26500
       rest-address: http://127.0.0.1:8080
       audience: zeebe-api
+      defaults:
+        poll-interval: PT10S #Cau hinh 10s gui 1 lan cho toi khi het timeout se gui tiep. Request tiep theo dua vao timeout :
+        stream-enabled: false
+        request-timeout: 10S # Cau hinh request timeout (thoi gian xu ly co the bi anh huong boi toc do xu ly va do tre cua mang)P
+        max-jobs-active: 5
+        timeout: 1s # Thoi gian toi da ma job worker hoan thanh cong viec va phan hoi lai cho zeebe broker
 #      base-url: ''
 #      ca-certificate-path: ''
 #      defaults:
@@ -53,8 +59,13 @@ camunda:
 
 logging:
   level:
-    root: INFO
-    org.camunda: DEBUG
+    root: OFF
+    io:
+      grpc: DEBUG
+      camunda:
+        zeebe:
+          client: DEBUG
+
   file:
     name: logs/app.log
   pattern:

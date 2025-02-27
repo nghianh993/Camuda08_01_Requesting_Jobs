@@ -8,10 +8,48 @@ server:
 camunda:
   client:
     mode: self-managed
+    auth:
+      client-id: zeebe
+      client-secret: zecret
+      issuer: http://localhost:18080/auth/realms/camunda-platform/protocol/openid-connect/token
     zeebe:
       enabled: true
       grpc-address: http://127.0.0.1:26500
       rest-address: http://127.0.0.1:8080
+      audience: zeebe-api
+#      base-url: ''
+#      ca-certificate-path: ''
+#      defaults:
+#        auto-complete: false
+#        enabled: false
+#        fetch-variables: ''
+#        force-fetch-all-variables: false
+#        max-jobs-active: 3
+#        max-retries: 3
+#        method-info: 4
+#        name: ''
+#        poll-interval: 1
+#        request-timeout: 1000
+#        stream-enabled: false
+#        stream-timeout: 3
+#        tenant-ids: ''
+#        timeout: 1000
+#        type: ''
+#      execution-threads: 1
+#      keep-alive: 1
+#      max-message-size: 1
+#      max-metadata-size: 1
+#      message-time-to-live: 1
+#      override-authority: 1
+#      prefer-rest-over-grpc: false
+#      request-timeout: 1
+#      scope: 1
+#    identity:
+#      scope: 1
+#      enabled: false
+#      base-url: ''
+#      audience: ''
+
 
 logging:
   level:
